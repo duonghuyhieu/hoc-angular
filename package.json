@@ -1,0 +1,7 @@
+{
+  "name": "hoc-angular",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
