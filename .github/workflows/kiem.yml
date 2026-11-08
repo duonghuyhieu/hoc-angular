@@ -22,6 +22,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Kiểm kiểu cả repo (như Ngày 1 dạy)
-        run: npx tsc --noEmit
+        run: |
+          if ls ngay-*/*.ts >/dev/null 2>&1; then npx tsc --noEmit; else echo 'Chưa có bài TypeScript'; fi
       - name: Chạy mọi file như học viên, so với README
         run: python tools/kiem.py
